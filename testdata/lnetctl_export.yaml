@@ -1,0 +1,29 @@
+net:
+-   net type: tcp1345
+    local NI(s):
+    -   nid: 10.20.0.8@tcp1345
+        status: up
+        interfaces:
+            0: bond0
+        statistics:
+            send_count: 72420754
+            recv_count: 63612337
+            drop_count: 0
+        health stats:
+            fatal_error: 0
+            health value: 1000
+            timeouts: 0
+            error: 0
+    -   nid: 10.20.0.9@tcp1345
+        status: down
+        interfaces:
+            0: bond0
+        statistics:
+            send_count: 0
+            recv_count: 0
+            drop_count: 5
+        health stats:
+            fatal_error: 1
+            health value: 0
+            timeouts: 2
+            error: 1

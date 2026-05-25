@@ -1,0 +1,14 @@
+[Unit]
+Description=Prometheus exporter for Lustre client-side metrics
+After=network.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=-/etc/default/lustrefs-exporter
+ExecStart=/usr/bin/lustrefs-exporter $LUSTREFS_EXPORTER_OPTS
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+snapshot_time:         1779683025.377780328 secs.nsecs
+read RPCs in flight:  3
+write RPCs in flight: 5
+DIO RPCs in flight: 1
+pending write pages:  128
+pending read pages:   64
+
+                        read                  write
+pages per rpc         rpcs   % cum % |       rpcs   % cum %
+1:           15164  18  18   |         57   1   1
+2:             256   0  18   |        128   2   3
+4:            1024   1  19   |        512   7  10
+8:            2048   2  21   |       1024  14  24
+16:           4096   5  26   |       2048  28  52
+32:           8192  10  36   |       4096  57  109

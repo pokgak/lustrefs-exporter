@@ -1,0 +1,8 @@
+snapshot_time:            1779683025.377780328 secs.nsecs
+req_waittime              0 samples [usec] 0 0 0 0
+req_active                0 samples [usec] 0 0 0 0
+req_timeout               0 samples [usec] 0 0 0 0
+interpret_reply           0 samples [usec] 0 0 0 0
+invalidate_pages          0 samples [pages] 0 0 0 0
+lockless_write_bytes      2048576 samples [bytes] 0 0 0 0
+lockless_read_bytes       1024288 samples [bytes] 0 0 0 0

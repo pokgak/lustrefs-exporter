@@ -1,0 +1,11 @@
+statistics:
+    msgs_alloc: 0
+    msgs_max: 256
+    errors: 3
+    send_count: 72420754
+    recv_count: 63612337
+    route_count: 0
+    drop_count: 7
+    resend_count: 12
+    response_timeout_count: 2
+    network_timeout_count: 16

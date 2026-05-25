@@ -1,0 +1,9 @@
+snapshot_time:            1779683025.377780328 secs.nsecs
+close                     1638616 samples [reqs]
+create                    12345 samples [reqs]
+getattr                   5678901 samples [reqs]
+intent_lock               24227828 samples [reqs]
+link                      0 samples [reqs]
+rename                    8765 samples [reqs]
+setattr                   234567 samples [reqs]
+unlink                    56789 samples [reqs]

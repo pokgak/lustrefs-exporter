@@ -1,0 +1,11 @@
+import:
+    target: pfs0-OST0001_UUID
+    state: CONNECTING
+    instance: 0
+    connect_flags: 0x0
+    connection:
+       failover_nids: [10.200.8.19@tcp]
+       current_connection: "10.200.8.19@tcp"
+       connection_attempts: 5
+       generation: 2
+       in-progress_invalidations: 0

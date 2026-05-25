@@ -1,0 +1,3 @@
+# Options for lustrefs-exporter
+# See lustrefs-exporter --help for available flags
+LUSTREFS_EXPORTER_OPTS="--port 32221 --lustre-path /proc/fs/lustre"

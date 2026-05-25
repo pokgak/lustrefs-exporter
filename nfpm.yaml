@@ -1,0 +1,26 @@
+name: lustrefs-exporter
+arch: amd64
+platform: linux
+version: "${VERSION}"
+maintainer: "Aiman Ismail <m.aimanismail@gmail.com>"
+description: "Prometheus exporter for Lustre client-side metrics"
+vendor: "pokgak"
+homepage: "https://github.com/pokgak/lustrefs-exporter"
+license: MIT
+
+contents:
+  - src: dist/lustrefs-exporter
+    dst: /usr/bin/lustrefs-exporter
+    file_info:
+      mode: 0755
+
+  - src: packaging/lustrefs-exporter.service
+    dst: /lib/systemd/system/lustrefs-exporter.service
+
+  - src: packaging/lustrefs-exporter.default
+    dst: /etc/default/lustrefs-exporter
+    type: config|noreplace
+
+scripts:
+  postinstall: packaging/postinstall.sh
+  preremove: packaging/preremove.sh

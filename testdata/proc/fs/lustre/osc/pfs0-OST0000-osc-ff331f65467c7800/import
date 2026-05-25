@@ -1,0 +1,28 @@
+import:
+    target: pfs0-OST0000_UUID
+    state: FULL
+    instance: 0
+    connect_flags: 0x7bfef3ff6b464
+    connect_data:
+       flags: 0x7bfef3ff6b464
+       instance: 0
+       target_version: 0.0.0.0
+    import_flags: 0x4005a
+    connection:
+       failover_nids: [10.200.8.17@tcp, 10.200.8.18@tcp]
+       current_connection: "10.200.8.17@tcp"
+       connection_attempts: 1
+       generation: 1
+       in-progress_invalidations: 0
+    rpcs:
+       inflight: 2
+       unregistering: 0
+       timeouts: 0
+       avg_waittime: 0 usec
+    service_estimates:
+       services: 1 sec
+       network: 0 sec
+    transactions:
+       last_replay_transno: 0x0
+       peer_committed_to: 0x0
+       last_committed_transno: 0x0

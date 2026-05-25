@@ -1,0 +1,4 @@
+used_mb: 128
+busy_cnt: 4
+reclaim: 256
+unevict: 0
