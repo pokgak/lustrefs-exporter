@@ -1,0 +1,54 @@
+version: 2
+
+project_name: lustrefs-exporter
+
+before:
+  hooks:
+    - go mod verify
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+    ldflags:
+      - -s -w
+    flags:
+      - -mod=vendor
+
+nfpms:
+  - id: lustrefs-exporter
+    package_name: lustrefs-exporter
+    maintainer: "Aiman Ismail <m.aimanismail@gmail.com>"
+    description: "Prometheus exporter for Lustre client-side metrics"
+    vendor: pokgak
+    homepage: "https://github.com/pokgak/lustrefs-exporter"
+    license: MIT
+    formats:
+      - deb
+    contents:
+      - src: packaging/lustrefs-exporter.service
+        dst: /lib/systemd/system/lustrefs-exporter.service
+      - src: packaging/lustrefs-exporter.default
+        dst: /etc/default/lustrefs-exporter
+        type: config|noreplace
+    scripts:
+      postinstall: packaging/postinstall.sh
+      preremove: packaging/preremove.sh
+
+release:
+  github:
+    owner: pokgak
+    name: lustrefs-exporter
+  draft: false
+  prerelease: auto
+
+archives:
+  - formats:
+      - tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: "checksums.txt"

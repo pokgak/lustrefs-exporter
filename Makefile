@@ -1,8 +1,7 @@
-VERSION ?= 0.1.0
 BINARY  := lustrefs-exporter
 DIST    := dist
 
-.PHONY: all build test deb clean
+.PHONY: all build test snapshot clean
 
 all: build
 
@@ -12,8 +11,8 @@ build:
 test:
 	go test -mod=vendor ./...
 
-deb: build
-	VERSION=$(VERSION) nfpm pkg --config nfpm.yaml --packager deb --target $(DIST)/
+snapshot:
+	goreleaser release --snapshot --clean
 
 clean:
 	rm -rf $(DIST)
